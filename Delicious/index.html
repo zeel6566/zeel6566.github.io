@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Delicious  Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+
+
+        <!-- Bootstrap bootstrap-touch-slider Slider Main Style Sheet -->
+        <link href="bootstrap-touch-slider.css" rel="stylesheet" media="all">
+  
+  <style type="text/css">
+  	h2:before
+  	{
+content: p;
+color: black;
+  	}
+  	.navbar
+  	{
+  		background-color: #3E3B33;;
+  	}
+  	.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  .carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #f4511e;
+}
+
+.carousel-indicators li {
+  border-color: #f4511e;
+}
+
+.carousel-indicators li.active {
+  background-color: #f4511e;
+}
+
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+
+.item span {
+  font-style: normal;
+}
+ .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  .hr
+  {
+  	animation-duration: 2s;
+  	animation-delay: 1s;
+  }
+  .why-us,.belief
+  {
+  	animation-duration: 4s;
+  	animation-delay: 4s;
+  }
+  .logo {
+  color: #f4511e;
+  font-size: 200px;
+  float: right;
+}
+ .bg-grey {
+    background-color: #f6f6f6;
+  </style>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	
+
+      function passValues(){
+        var name = document.getElementById("name").value;
+        localStorage.setItem("nameValue", name);
+
+        var email = document.getElementById("email").value;
+        localStorage.setItem("emailValue", email);
+
+        var phone = document.getElementById("phone").value;
+        localStorage.setItem("phoneValue", phone);
+
+        var date = document.getElementById("date").value;
+        localStorage.setItem("dateValue", date);
+
+        var time = document.getElementById("time").value;
+        localStorage.setItem("timeValue", time);
+
+        var people = document.getElementById("people").value;
+        localStorage.setItem("peopleValue", people);
+
+        var message = document.getElementById("msg").value;
+        localStorage.setItem("messageValue", message);
+
+        return false;
+      }
+
+</script>
+
+</head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  	<br><br>
+
+
+<!----------->
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage" style="color: #DCE8D7;font-size: 32px;">DELICIOUS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="font-weight: bolder;color:pink; ">
+      <ul class="nav navbar-nav navbar-right" >
+        <li><a href="main.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+     
+        <li><a href="#reservations">RESERVATIONS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  	<!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="slide-1c.jpg" alt="Los Angeles">
+      <div class="carousel-caption">
+          <h1 class=" hr fadeInDown animated"> Welcome to Delicious Restuarant</h1>
+          <h3 class=" hr fadeInUp animated"> The Chef creates divine combinations.</h3>
+        </div>
+    </div>
+
+    <div class="item">
+      <img src="slide-2c.jpg" alt="Chicago">
+       <div class="carousel-caption">
+          <h1 class="hr fadeInUp animated"> Exclusive Food</h1>
+          <h3 class="hr fadeInDown animated"> The Chef creates divine combinations.</h3>
+        </div>
+    </div>
+
+    <div class="item">
+      <img src="slide-3c.jpg" alt="New York">
+       <div class="carousel-caption">
+          <h1 class="hr fadeInDown animated"> Welcome to Delicious Restuarant</h1>
+           <h3 class="hr fadeInUp animated"> The Chef creates divine combinations.</h3>
+        </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a></div>
+<br><br><br>
+<!-------about----->
+<h2 align="center" style="color: red;" id="about"><i>About Us</i></h2><br><br>
+<div id="about" class="container-fluid slideanim">
+  <div class="row">
+  	<div class="col-lg-5">
+  		<img src="about.jpg" alt="about" width="70%" height="50%" style="margin: 2px 80px;">
+          </div>
+    <div class="col-lg-7">
+      
+      <h4>Established in 2018, <span style="font-weight: bold;">Cafe Delicious</span> is a locally-owned, independent  cafe service. Till now, we’re still happily serving the Mumbai people with quality fresh food. Our service has grown to become one of Bandra's  most recognized services. It’s almost as popular as our famous burgers!<br><br><br><br><br>
+      <br><center><button class="btn btn-info btn-lg"><a href="#reservations">Get in Touch</a></button></center>
+    </div>
+    
+   
+  </div>
+</div><br><br><br><br><br><br>
+<!-- ======= Whu Us Section ======= -
+    <section id="why-us" class="why-us fadeInLeft animated">
+      <div class="container">
+
+        <div class="section-title" style="color: white;">
+          <h2 align="center"  style="color: red;"><i>Why choose <span>Us???</span></i></h2><br>
+          <h5 align="center">We love cafes as much as you do. That’s why we’ve been helping them fill tables since 2018.<br> Welcome to delicious cafe...</h5>
+        </div>
+        </div>
+      </div>
+    </section><br>
+
+
+<section id="belief" class="belief fadeInRight animated" style="background-color: #3E3B33;">
+      <div class="container">
+
+        <div class="section-title" style="color: white;">
+         <br><br> <h2 align="center" style="color: red;"> <i><span>OUR BELIEF</span></i></h2><br>
+          <h5 align="center">Our customers have offered us over a decade of memorable moments serving the Ottawa community, and so we believe the least we can do is continue serving them delicious dishes with a heartfelt smile. Customer service is a cornerstone of our business, and receiving a smile in return is what we strive for – we hope that our food will make everyone’s day a little bit better.</h5><br><br><br>
+        </div>
+        </div>
+      </div>
+    </section><br><br>-->
+    <div class="container-fluid bg-grey">
+    	
+  <div class="row">
+    
+    <div class="col-sm-8" style="text-align: justify-all;">
+    	<h2><u>Our Values</u></h2>
+      
+      <h4><strong>Why Us:</strong></h4> <h5>We love cafes as much as you do. That’s why we’ve been helping them fill tables since 2018.<br> Welcome to delicious cafe...</h5>
+      <h4><strong>VISION:</strong></h4>Customer service is a cornerstone of our business, and receiving a smile in return is what we<br> strive for – we hope that our food will make everyone’s day a little bit better.
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span>
+    </div>
+  </div>
+</div><br>
+
+    <!-----menu--->
+   <br><br> <section id="menu" class="menu">
+      <div class="container">
+
+        <div class="section-title">
+         <h2 align="center">Check our Tasty<span style="color: #f4511e ">Menu</span></h2>
+        </div>
+<br>
+        <div class="row">
+
+
+<div class="jt_row jt_row-fluid row visible" style="padding: 5px;">
+                        
+
+                        <div class="col-md-4 jt_col column_container">
+                            <h3><u>Prime Steaks</u></h3>
+                            <ul>
+                                <li>
+                                   <b>Filet</b> 
+                                    <div class="detail">7 oz. Center Cut10 oz. Double cut<span class="price"  style="padding-left: 40px;color: red;font-style: italic;font-weight: bold;">250.00</span></div>
+                                </li>
+                                <li>
+                                    <b>Special Filet</b> 
+                                    <div class="detail">10 oz Greg Norman Ranch<span class="price" style="padding-left: 83px;color: red;font-style: italic;font-weight: bold;">200.00</span></div>
+                                </li>
+                                <li>
+                                   <b> New York Strip</b> 
+                                    <div class="detail">9 oz. Center Cut12 oz. Double cut<span class="price"style="padding-left: 38px;color: red;font-style: italic;font-weight: bold;">109.00</span></div>
+                                </li>
+                                <li>
+                                  <b>  Porterhouse</b> 
+                                    <div class="detail">7 oz. Center Cut10 oz. Double cut<span class="price" style="padding-left: 37px;color: red;font-style: italic;font-weight: bold;">170.00</span></div>
+                                </li>
+                                <li>
+                                    <b>Delmonico</b> 
+                                    <div class="detail">10 oz Greg Norman Ranch<span class="price" style="padding-left: 81px;color: red;font-style: italic;font-weight: bold;">200.00</span></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 jt_col column_container">
+                            <h3><u>Our Burgers</u></h3>
+                            <ul>
+                                <li><b>King Burger</b>
+                                    <div class="detail">Beacon, Onion, Cheese, Fried egg<span class="price" style="padding-left: 55px;color: red;font-style: italic;font-weight: bold;">175.00</span></div>
+                                </li>
+                                <li><b>Mushroom Adiction</b>
+                                    <div class="detail">Swiss cheese, Mushrooms<span class="price" style="padding-left: 105px;color: red;font-style: italic;font-weight: bold;">180.00</span></div>
+                                </li>
+                                <li><b>Mexican Burger</b>
+                                    <div class="detail">Cheese, Jalapeños, Chilli<span class="price" style="padding-left: 113px;color: red;font-style: italic;font-weight: bold;">120.00</span></div>
+                                </li>
+                                <li><b>Double Cheese</b>
+                                    <div class="detail">Mozzarella, Chedar<span class="price" style="padding-left: 151px;color: red;font-style: italic;font-weight: bold;">107.00</span></div>
+                                </li>
+                                <li><b>Rodeo Texas</b>
+                                    <div class="detail">Onion rings, Cheese, Beacon<span class="price" style="padding-left: 90px;color: red;font-style: italic;font-weight: bold;">149.00</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 jt_col column_container">
+                            <h3><u>Desserts</u></h3>
+                            <ul>
+                                <li>
+                                   <b> Vanilla Ice Cream</b>
+                                    <div class="detail">Ice cream vanilla flavor<span class="price" style="padding-left: 90px;color: red;font-style: italic;font-weight: bold;">165.00</span></div>
+                                </li>
+                                <li>
+                                   <b> Chocolate Cake</b>
+                                    <div class="detail">Served with orange ice cream<span class="price" style="padding-left: 50px;color: red;font-style: italic;font-weight: bold;">100.00</span></div>
+                                </li>
+                                <li>
+                                   <b> Brownie Deluxe</b>
+                                    <div class="detail">Served with vanilla ice cream<span class="price" style="padding-left: 53px;color: red;font-style: italic;font-weight: bold;">115.00</span></div>
+                                </li>
+                                <li>
+                                   <b> Orange Ice Cream</b>
+                                    <div class="detail">Ice cream orange flavor<span class="price" style="padding-left: 90px;color: red;font-style: italic;font-weight: bold;">117.00</span></div>
+                                </li>
+                                <li>
+                                   <b> Cheese Cake</b>
+                                    <div class="detail">Served with ice cream<span class="price" style="padding-left: 100px;color: red;font-style: italic;font-weight: bold;">128.00</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                       
+
+                    </div>
+  	</div>
+  </div></section><br><br><br>
+  <!-- End Menu Section -->
+
+
+  <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery dark" style="background-color: #3E3B33;color: white">
+      <div class="container-fluid">
+
+        <div class="section-title">
+         <center> <h2>Some photos from <span style="color: #f4511e ">Our Restaurant</span></h2>
+          <p>If a picture says a thousand words, then you can imagine <br>how long it would take to describe all our mouthwatering selections.</p></center>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-1.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-1.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-2.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-2.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-3.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-3.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-4.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-4.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div><br><br><br>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-5.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-5.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-6.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-6.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-7.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-7.jpg" alt="" class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="gallery-8.jpg" class="venobox" data-gall="gallery-item">
+                <img src="gallery-8.jpg" alt=""class="img-thumbnail">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section --><br><br><br><br>
+
+
+<!--Testimoniaals-->
+
+  <!-- Wrapper for slides -->
+    <h2 align="center">What our <span style="color: #f4511e ">Customers say.</span></h2>
+    <div style="background-image: url(testimonials-bgg.jpg);">
+     
+  <div id="myCarouse2" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+  <ol class="carouse2-indicators">
+    <li data-target="#myCarouse2" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarouse2" data-slide-to="1"></li>
+    <li data-target="#myCarouse2" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    
+    	
+      <div class="item active slideanim">
+        <h4 style="color: white;font-weight: bolder;"><br><br><br><br>"This cafe is the best. I am so happy with the food!"<br><br><br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item fadeInDown animated">
+        <h4 style="color: white;font-weight: bolder;"><br><br><br><br>"One word... WOW!!"<br><br><br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item slideanim">
+        <h4 style="color: white;font-weight: bolder;"><br><br><br><br>"Could I... BE any more happy with this cafe?"<br><br><br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarouse2" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarouse2" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a></div>  </div>
+
+
+
+    <!-- ======= Book A Table Section ======= --><br><br><br>
+
+    <section id="reservations" class="book-a-table">
+      <div class="container slideanim">
+
+        <div class="section-title">
+         <center><h2>Book a <span style="color:  #f4511e">Table</span></h2>
+          <p>Booking a table has never been so easy with free & instant online restaurant reservations, booking now!!</p>
+        </div>
+</center> <br><br>
+        <form action="BookTableData.html" method="post" role="form" class="php-email-form">
+          <div class="form-row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+              <div class="validate"></div>
+            </div>
+          
+          <div class="form-group">
+            <textarea class="form-control" id="msg" name="message" rows="5" placeholder="Message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-primary disabled">
+  <span class="spinner-border spinner-border-sm"></span>
+  Loading..
+</button>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. <b>Thank you!</b></div>
+          </div><br>
+         <div class="text-center"><button type="submit" class="btn btn-success btn-lg"><a onclick="passValues()">Send Message</a></button></div>
+        </form>
+
+      </div>
+    </section><!-- End Book A Table Section --><br><br><br>
+
+
+
+  <!----->
+   <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact" style="background-color: #3E3B33;color: white">
+      <div class="container">
+
+        <div class="section-title">
+         <center> <h2><span>Contact</span> Us</h2></center>
+          
+        </div>
+      </div>
+
+      <div class="map">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container mt-5">
+      	<b>
+
+        <div class="info-wrap">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 info">
+              <i class="icofont-google-map"></i>
+              <h4>Location:</h4>
+              <p>A108 Adam Street<br>South Mumbai ,  535022</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="icofont-clock-time icofont-rotate-90"></i>
+              <h4>Open Hours:</h4>
+              <p>Monday-Saturday:<br>11:00 AM - 23:00 PM</p>
+            </div>
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="icofont-clock-time icofont-rotate-90"></i>
+              <h4>Email:</h4>
+              <p>info@example.com<br>contact@example.com</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <i class="icofont-phone"></i>
+              <h4>Call:</h4>
+              <p>+91 95589 55488 <br>+91 95589 22475 </p>
+            </div>
+          </div></div></b>
+        </div>
+
+       
+
+      </div>
+    </section><br><!-- End Contact Section -->
+    <!-------footerrrrr--->
+     <footer id="footer" style="border: 1px solid transparent">
+     	
+    <div class="container-fluid" style="background-color: #3E3B33;color: white;">
+    	<center>
+      <h3>Delicious</h3>
+      <p>For more information or any query you can join us to our social media accounts.</p><br>
+      <div class="social-links bounce animated">
+        <a href="https://twitter.com/home" class="icon tw"><i class="fa fa-twitter" style="background-color: white;border-radius: 50%;border: 1x solid grey; padding:10px;"></i></a>
+        <a href="https://www.facebook.com/" class="icon fb"><i class="fa fa-facebook" style="background-color: white;border-radius: 50%;border: 1x solid grey; padding:10px;"></i></a>
+        
+        <a href="https://in.pinterest.com/" class="icon in"><i class="fa fa-pinterest" style="background-color: white;border-radius: 50%;border: 1x solid grey; padding:10px;"></i></a>
+        <a href="https://myaccount.google.com/profile" class="icon go"><i class="fa fa-google-plus" style="background-color: white;border-radius: 50%;border: 1x solid grey; padding:10px;"></i></a>
+      </div><br><br>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Delicious</span></strong>. All Rights Reserved<br>
+      </div></center></div></footer>
+
+   
+</body>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+
+  </html>
